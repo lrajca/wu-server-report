@@ -4,6 +4,9 @@ $bases = ""
 #Path to Credentials stored as a CliXML File
 $credentialPath = ""
 
+#Path to CSV File Output
+$csvPath = ""
+
 #End variable declaration
 
 
@@ -79,7 +82,7 @@ Foreach ($Computer in $Computers){
     If (Test-Connection $Computer.name -Count 1){
 
     Try {
-        $Output = Invoke-Command -ComputerName $Computer.name -Credential $Credentials -ScriptBlock $Script -ErrorAction Stop | Select-Object 'Server', 'IP Address', 'Operating System', 'Last Update', 'Update Name', 'Update Result', 'Restart Pending', 'WSUS Server' | Export-CSV -Append .\UpdateReport4.csv
+        $Output = Invoke-Command -ComputerName $Computer.name -Credential $Credentials -ScriptBlock $Script -ErrorAction Stop | Select-Object 'Server', 'IP Address', 'Operating System', 'Last Update', 'Update Name', 'Update Result', 'Restart Pending', 'WSUS Server' | Export-CSV -Append $csvPath
         } 
         
    Catch {
