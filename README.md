@@ -1,6 +1,6 @@
 Windows Update Report
 
-Alternate method of running reports on Windows Updates, rather than through WSUS. Can be used for gaining reports on Servers getting updates directly from Windows, WSUS, SCCM or other methods.
+Alternate method of running reports on Windows Updates, rather than through WSUS. Can be used for generating reports on Servers getting updates directly from Windows, WSUS, SCCM or other methods.
 
 Query outputs include:
 
