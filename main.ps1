@@ -1,4 +1,4 @@
-﻿#Full Canonical name of Server OU's to query
+﻿#Full Distinguished name of Server OU's to query
 $bases = ""
 
 #Path to Credentials stored as a CliXML File
